@@ -1,0 +1,25 @@
+<table class="table table-striped table-condensed">
+  <nav class="navbar navbar-default">
+    <div class="collapse navbar-collapse">
+      <form class="navbar-form">
+        <button type="button" class="btn btn-default"><%= link_to 'New Task', new_todo_path %></button>
+      </form>
+    </div>
+  </nav>
+
+  <tr>
+    <th>Tittle</th>
+    <th>Duedate</th>
+    <th>Note</th>
+  </tr>
+  <% @todos.each do |todo| %>
+    <tr>
+      <td><%= todo.title %></td>
+      <td><%= todo.duedate %></td>
+      <td><%= todo.note %></td>
+      <td><%= link_to 'Detail', todo_path(todo) %></td>
+      <td><%= link_to 'Edit', edit_todo_path(todo) %></td>
+      <td><%= link_to 'Finish', todo_path(todo), method: :delete, data:{ confirm: "Really???"} %></td>
+    </tr>
+  <% end %>
+</table>

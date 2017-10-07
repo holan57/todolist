@@ -1,0 +1,8 @@
+<div class="jumbotron">
+  <div class="container text-center">
+    <div class="label label-info"><%= @todo.duedate %></div>
+    <div><span class="glyphicon glyphicon-triangle-right"></span><%= @todo.title %></div>
+    <div><%= simple_format(@todo.detail) %></div>
+    <div><%= link_to 'Back to index', todos_path %></div>
+  </div>
+</div>
