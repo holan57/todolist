@@ -1,8 +1,8 @@
-<div class="jumbotron">
-  <div class="container text-center">
-    <div class="label label-info"><%= @todo.duedate %></div>
-    <div><span class="glyphicon glyphicon-triangle-right"></span><%= @todo.title %></div>
-    <div><%= simple_format(@todo.detail) %></div>
-    <div><%= link_to 'Back to index', todos_path %></div>
+<div class="container">
+<div id="showtable" class="jumbotron jumbotron-fluid ">
+    <h1 class="display-3">Task Detail</h1>
+    <p class="lead"> Deadline: <%= @todo.duedate %></p>
+    <p><%= @todo.detail %></p>
+    <p class="lead"><button type="button" class="btn btn-link"><%= link_to 'Back to index', todos_path %></button></p>
   </div>
 </div>

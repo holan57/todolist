@@ -28,7 +28,6 @@ class TodosController < ApplicationController
 
   def destroy
     @todo.destroy
-
     redirect_to todos_url
   end
 

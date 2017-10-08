@@ -1,2 +1,10 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
+#todotable, #showtable, #navstyle {
+  align-items: center;
+  text-align: center;
+  background-color: #FADF63;
+}
+#formtable {
+  background-color: #FADF63;
+}
